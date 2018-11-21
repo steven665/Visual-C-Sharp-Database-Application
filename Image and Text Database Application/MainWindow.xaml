@@ -5,8 +5,35 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Image_and_Text_Database_Application"
         mc:Ignorable="d"
-        Title="MainWindow" Height="350" Width="525">
-    <Grid>
+        Title="Database App" Height="460.472" Width="1083.554" Closing="Window_Closing">
         
+
+    <Grid>
+        <ListView x:Name="ListView" HorizontalAlignment="Left" Margin="10,44,0,10" Width="259" SelectionChanged="ListView_SelectionChanged" Loaded="ListView_Loaded">
+            <ListView.View>
+                <GridView>
+                    <GridViewColumn/>
+                </GridView>
+            </ListView.View>
+        </ListView>
+        <TextBox Height="22" Margin="274,17,362,0" TextWrapping="Wrap" VerticalAlignment="Top"/>
+        <Label Content="Search :" HorizontalAlignment="Left" Margin="274,-6,0,0" VerticalAlignment="Top"/>
+        <Button x:Name="SearchButton" Content="Search" HorizontalAlignment="Right" Margin="0,18,274,0" VerticalAlignment="Top" Width="83"/>
+        <Button x:Name="AddRecordButton" Content="Add Record" Margin="0,18,186,0" VerticalAlignment="Top" HorizontalAlignment="Right" Width="83" Click="AddRecordButton_Click"/>
+        <Button x:Name="DeleteRecordButton" Content="Delete Record" Margin="0,18,10,0" VerticalAlignment="Top" HorizontalAlignment="Right" Width="83"/>
+        <Button x:Name="SaveRecordButton" Content="Save Record" Margin="0,18,98,0" VerticalAlignment="Top" HorizontalAlignment="Right" Width="83" IsEnabled="False"/>
+        <Rectangle Fill="#FFF4F4F5" Margin="274,44,10,10" Stroke="Black"/>
+        <DockPanel HorizontalAlignment="Left" Height="100" LastChildFill="False" Margin="469,236,0,0" VerticalAlignment="Top" Width="100"/>
+        <Image x:Name="ImageBox" Margin="274,255,10,10"/>
+        <TextBox x:Name="CustomerNameTextBox" HorizontalAlignment="Left" Height="24" Margin="586,52,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="169"/>
+        <TextBox x:Name="CarTypeTextBox" HorizontalAlignment="Left" Height="24" Margin="827,52,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="169"/>
+        <Label Content="Customer Name :" HorizontalAlignment="Left" Margin="479,51,0,0" VerticalAlignment="Top"/>
+        <Label Content="Car Type :" HorizontalAlignment="Left" Margin="760,51,0,0" VerticalAlignment="Top"/>
+        <TextBox x:Name="CustomerIDTextBox" HorizontalAlignment="Left" Height="24" Margin="365,52,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="109"/>
+        <Label Content="Customer ID :" HorizontalAlignment="Left" Margin="283,51,0,0" VerticalAlignment="Top"/>
+        <TextBox x:Name="CustomerNotesTextBox" Height="168" Margin="283,82,18,0" TextWrapping="Wrap" VerticalAlignment="Top" AcceptsReturn="True"/>
+        <Button x:Name="RefreshButton" Content="Refresh List" HorizontalAlignment="Left" Margin="10,18,0,0" VerticalAlignment="Top" Width="259" Click="RefreshButton_Click"/>
     </Grid>
+
+    
 </Window>
